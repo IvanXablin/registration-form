@@ -72,13 +72,12 @@ function validateEmail(email) {
     const regex = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
 
     if (email.match(regex) === null) {
-        displayError(emailInput, 'Некорректный Email!');
+        displayError(emailInput, 'Некорректный Email! <br> Email должен быть формата (example@email.com)');
         return true;
     }
     else {
         removeError(emailInput);
     }
-    
     return false;
 }
 
